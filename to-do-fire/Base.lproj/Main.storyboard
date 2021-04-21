@@ -72,7 +72,6 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="loginTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="r2b-4N-kfi"/>
-                                                    <segue destination="W57-ld-PVO" kind="presentation" identifier="tasksSegue" modalPresentationStyle="fullScreen" id="ZR0-Bc-uw2"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dPS-r9-957">
@@ -115,6 +114,7 @@
                         <outlet property="emailTextField" destination="EFR-0f-ueO" id="dGD-ib-dSI"/>
                         <outlet property="passwordTextField" destination="TKU-Em-Nd0" id="1yO-HK-QDL"/>
                         <outlet property="warnLabel" destination="9El-Au-dZm" id="5cX-An-nzQ"/>
+                        <segue destination="W57-ld-PVO" kind="show" identifier="tasksSegue" id="92X-jr-SAt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -130,11 +130,11 @@
                         <viewControllerLayoutGuide type="bottom" id="qHS-by-U4E"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="L7M-9b-V8h">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ypd-on-UOP">
-                                <rect key="frame" x="0.0" y="44" width="414" height="692"/>
+                                <rect key="frame" x="0.0" y="56" width="414" height="660"/>
                                 <color key="backgroundColor" red="0.35629040000000001" green="0.31333422659999999" blue="0.83926326039999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="separatorColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -163,6 +163,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Tasks" id="Y71-lC-Dc8">
+                        <barButtonItem key="leftBarButtonItem" title="Sign Out" id="cKK-LG-JC7">
+                            <connections>
+                                <action selector="signOutTapped:" destination="Thc-EO-HfB" id="2fe-t8-Wbx"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="6ZL-bk-Qbi">
                             <connections>
                                 <action selector="addTapped:" destination="Thc-EO-HfB" id="8aE-02-uCd"/>
@@ -184,7 +189,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="6OO-2i-mUS"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="luD-Nf-euP">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

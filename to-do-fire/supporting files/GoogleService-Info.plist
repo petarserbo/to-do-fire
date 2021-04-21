@@ -30,5 +30,7 @@
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
 	<string>1:488373976739:ios:840084443f0d89c67a0916</string>
+	<key>DATABASE_URL</key>
+	<string>https://to-do-fire-8797d-default-rtdb.firebaseio.com</string>
 </dict>
 </plist>
